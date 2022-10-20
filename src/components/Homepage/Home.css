@@ -1,10 +1,12 @@
 .home-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
     background-color: #5a25b8;
     background-image: linear-gradient(129deg, #5a25b8 56%, #982f9b 87%);
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .home-navbar {
@@ -37,4 +39,9 @@
 
 .signup-button {
     background-color: #ae0c7e !important ;
+}
+
+.home-title {
+    font-size: 36px;
+    font-weight: bolder;
 }
