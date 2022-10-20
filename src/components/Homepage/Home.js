@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import Button from '@mui/material/Button'
 import image from '../../images/Image.png'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -17,8 +18,8 @@ function Home() {
                     <li>About</li>
                     <li>Github</li>
                     <li>Contact</li>
-                    <li><Button className='login-button' variant="contained">Login</Button></li>
-                    <li><Button className='signup-button' variant="contained">Sign Up</Button></li>
+                    <li><Link to="/login"><Button className='login-button' variant="contained">Login</Button></Link></li>
+                    <li><Link to="/signup"><Button className='signup-button' variant="contained">Sign Up</Button></Link></li>
                 </ul>
             </div>
         </div>

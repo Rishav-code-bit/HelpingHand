@@ -1,0 +1,24 @@
+.login-body-container{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.login-form-container{
+    float: left;
+    width: 50%;
+    background-color: red;
+}
+
+.login-image-container{
+    float: right;
+    width: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
