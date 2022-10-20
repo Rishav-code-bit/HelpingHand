@@ -7,10 +7,22 @@ const Left = styled.div`
  align-items: center;
 `;
 
+const Center = styled.div`
+ flex: 1;
+ text-align: center;
+`;
+
 const Right = styled.div`
  display: flex;
  justify-content: flex-end;
 `;
+
+const Wrapper = styled.div`
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`
 
 const Button = styled.button`
   color: black;
@@ -32,15 +44,22 @@ const Button = styled.button`
 
 function App() {
   return (
-    <div className="App">
-      Rishav
-      <Right>
-        <Button variant="text" >Login</Button>
-        <Button onclick="activateLasers()">SignUp</Button>
-      </Right>
-      <header className="App-header">
-
-      </header>
+    <div className="App"  style={{backgroundColor: '#310655'}}>
+      <Wrapper>
+        <Center style={{color: "white"}}>Home</Center>
+        <Center style={{color: "white"}}>About</Center>
+        <Center style={{color: "white"}}>Github</Center>
+        <Center style={{color: "white" }}>Contact</Center>
+        <Right>
+          <Button variant="text">Login</Button>
+          <Button onclick="activateLasers()">SignUp</Button>
+        </Right>
+      </Wrapper>
+      
+      <Wrapper>
+        <img src="image.png"></img>
+        <Center style={{color: "white"}}><p><b>PRODUCTS MADE</b><br></br><b>WITH LOVE</b></p></Center>
+      </Wrapper>
     </div>
   );
 }
