@@ -11,13 +11,28 @@
 .login-form-container{
     float: left;
     width: 50%;
-    background-color: burlywood;
+    background-color: #783c84;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.login-form-container h1{
+    font-size: 50px;
+}
+.login-form-container h3{
+    font-size: 24px;
+}
+.login-link{
+    color: aqua;
+    padding-left: 20px;
 }
 
 .login-image-container{
     float: right;
     width: 50%;
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,5 +41,17 @@
 .login-form{
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 40%;
+    min-width: 300px;
+    padding: 40px;
+    justify-content: space-between;
+    height: 150px;
 }
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+
