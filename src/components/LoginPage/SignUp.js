@@ -19,8 +19,6 @@ function SignUp() {
             <TextField id="standard-basic" type="email" label="Email" variant="outlined" />
             <TextField className='login-text' id="standard-basic" type="password" label="Password" variant="outlined" />
           </div>
-          <br/>
-          <br/>
           <div className='signup-buttons'>
               <Button variant='contained'>Sign In</Button>
               <Button variant='contained'>Sign In as Seller</Button>
