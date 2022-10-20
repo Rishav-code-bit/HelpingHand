@@ -53,7 +53,30 @@
 }
 
 .home-body-container{
-    background-color: orange;
     display: flex;
+}
 
+.home-image-container{
+    float: left;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-text-container{
+    float: right;
+    width: 50%;
+    padding-top: 100px;
+    color: aliceblue;
+}
+
+.home-text-container h1{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.home-text-container p{
+    padding-top: 40px;
+    width: 60%;
 }
