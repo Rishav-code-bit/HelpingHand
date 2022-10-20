@@ -9,6 +9,12 @@
     background-image: linear-gradient(129deg, #5a25b8 56%, #982f9b 87%);
 }
 
+
+.home-title h1{
+    font-size: 32px;
+    font-weight: bolder;
+}
+
 .home-navbar {
     padding: 30px;
 }
@@ -21,6 +27,8 @@
 
 .home-lists ul{
     display: flex;
+    align-items: center;
+    padding-top: 15px;
 }
 
 .home-lists ul li{
@@ -28,7 +36,7 @@
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
-    padding-top: 5px;
+    font-size: 24px;
 }
 
 .login-button {
@@ -41,7 +49,6 @@
     background-color: #ae0c7e !important ;
 }
 
-.home-title {
-    font-size: 36px;
-    font-weight: bolder;
+.home-lists ul li:hover{
+    color: rgb(117, 112, 112);
 }
