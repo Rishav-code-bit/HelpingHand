@@ -11,7 +11,7 @@
 .login-form-container{
     float: left;
     width: 50%;
-    background-color: red;
+    background-color: burlywood;
 }
 
 .login-image-container{
@@ -21,4 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
