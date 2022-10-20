@@ -1,0 +1,40 @@
+.home-container {
+    background-color: #5a25b8;
+    background-image: linear-gradient(129deg, #5a25b8 56%, #982f9b 87%);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-navbar {
+    padding: 30px;
+}
+
+.home-navbar-container {
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-lists ul{
+    display: flex;
+}
+
+.home-lists ul li{
+    list-style: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.login-button {
+    background-color: #c77809 !important ;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.signup-button {
+    background-color: #ae0c7e !important ;
+}
