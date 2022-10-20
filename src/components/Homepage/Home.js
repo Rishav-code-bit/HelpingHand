@@ -14,9 +14,9 @@ function Home() {
           </div>
             <div className='home-lists'>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Github</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><a href="https://github.com/Rishav-code-bit/HelpingHand">Github</a></li>
                     <li>Contact</li>
                     <li><Link to="/login"><Button className='login-button' variant="contained">Login</Button></Link></li>
                     <li><Link to="/signup"><Button className='signup-button' variant="contained">Sign Up</Button></Link></li>
