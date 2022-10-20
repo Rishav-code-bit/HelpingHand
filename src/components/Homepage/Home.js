@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import Button from '@mui/material/Button'
+import image from '../../images/Image.png'
 
 function Home() {
   return (
@@ -21,6 +22,19 @@ function Home() {
                 </ul>
             </div>
         </div>
+        </div>
+        <div className='home-body-container'>
+          <div className='home-image-container'>
+            <img src={image} alt="SDP3"></img>
+          </div>
+          <div className='home-text-container'>
+            <h1>PRODUCTS MADE <br/>WITH LOVE</h1>
+            <p>Get access to buy handicrafts items crafted by utmost care 
+              by the most skilled yet underrated craftsmen of our country. 
+              The sell it directly to you without any third party so it 
+              gives them a lot of support with the additional benefit of 
+              you getting some fabulous items.</p>
+          </div>
         </div>
     </div>
   )

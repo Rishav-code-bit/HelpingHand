@@ -9,7 +9,6 @@
     background-image: linear-gradient(129deg, #5a25b8 56%, #982f9b 87%);
 }
 
-
 .home-title h1{
     font-size: 32px;
     font-weight: bolder;
@@ -51,4 +50,10 @@
 
 .home-lists ul li:hover{
     color: rgb(117, 112, 112);
+}
+
+.home-body-container{
+    background-color: orange;
+    display: flex;
+
 }
