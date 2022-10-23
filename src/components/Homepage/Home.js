@@ -10,16 +10,16 @@ function Home() {
         <div className='home-navbar'>
         <div className="home-navbar-container">
           <div classname='home-title'>
-            <h1>SDP App</h1>
+            <h1> </h1>
           </div>
             <div className='home-lists'>
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><a href="https://github.com/Rishav-code-bit/HelpingHand">Github</a></li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Github</li>
                     <li>Contact</li>
-                    <li><Link to="/login"><Button className='login-button' variant="contained">Login</Button></Link></li>
-                    <li><Link to="/signup"><Button className='signup-button' variant="contained">Sign Up</Button></Link></li>
+                    <li><Link className='link-decoration' to="/login"><Button className='login-button' variant="contained">Login</Button></Link></li>
+                    <li><Link className='link-decoration' to="/signup"><Button className='signup-button' variant="contained">Sign Up</Button></Link></li>
                 </ul>
             </div>
         </div>
