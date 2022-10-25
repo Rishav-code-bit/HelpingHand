@@ -55,3 +55,14 @@
     height: 100px;
 }
 
+.seller-button-user{
+    width: 300px;
+    background-color: #7b96d4 !important;
+}
+
+.seller-button-seller{
+    width: 300px;
+    background-color: #b89bc0 !important;
+}
+
+
