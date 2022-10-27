@@ -1,12 +1,14 @@
 import React from 'react'
 import './Login.css'
 import image from '../../images/img2.png'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import LoginService from '../../services/LoginService';
 
 function Login() {
+
+  const history = useHistory();
 
   const [user, setUser] = useState({
     email: "",
@@ -23,8 +25,9 @@ function Login() {
       e.preventDefault();
       LoginService.getUser(user.email)
       .then((response) => {
+        console.log(response.data);
         if(response.data.password === user.password){
-          alert("Authentication Successful");
+          history.push("/dashboard");
         } else{
           alert("Username or password incorrect!");
         }
