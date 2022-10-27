@@ -4,7 +4,7 @@ import Home from './components/Homepage/Home';
 import Login from './components/LoginPage/Login';
 import SignUp from './components/LoginPage/SignUp'
 import about from './components/About/abt'
-
+import LoginService from './services/LoginService';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/about" exact component={about} />
         <Route path="/signup" exact component={SignUp} />
         <Route path="/login" exact component={Login} />
+        <Route path="/loginservice" exact component={LoginService} />
       </Switch>
   </BrowserRouter>
   );
