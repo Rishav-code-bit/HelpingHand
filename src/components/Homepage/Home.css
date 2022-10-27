@@ -104,14 +104,14 @@ Link{
 
 .home-text-container{
     float: right;
-    width: 50%;
-    padding-top: 130px;
+    width: 120vh;
+    padding-top: 80px;
     color: aliceblue;
 }
 
 .home-text-container h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900px;
 }
 
