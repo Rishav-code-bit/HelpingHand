@@ -24,7 +24,6 @@ function SignUp() {
     e.preventDefault();
     UserService.saveUser(user)
       .then((response) => {
-        console.log(response);
         alert("User is successfully registered");
       })
       .catch((error) => {
