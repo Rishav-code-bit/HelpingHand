@@ -4,6 +4,7 @@ import image from '../../images/img2.png'
 import { Link } from 'react-router-dom'
 import { Button } from '@mui/material';
 import { useState } from 'react';
+import LoginService from '../../services/LoginService';
 
 function Login() {
 
@@ -18,15 +19,27 @@ function Login() {
     console.log(user);
   }
 
-  const handleSubmit = () => {
-      alert(`${user.email} ${user.password}`)
+  const handleSubmit = (e) => {
+      e.preventDefault();
+      LoginService.getUser(user.email)
+      .then((response) => {
+        if(response.data.password === user.password){
+          alert("Authentication Successful");
+        } else{
+          alert("Username or password incorrect!");
+        }
+      })
+      .catch((error) => {
+        alert("Username or password incorrect!")
+      })
       setUser({
         email: "",
         password: "",
       })
   }
 
-  const handleSeller = () => {
+  const handleSeller = (e) => {
+    e.preventDefault();
     if(user.email==='admin' && user.password==='12345678'){
       alert("Successfully logged in as Seller!");
     }
@@ -53,7 +66,6 @@ function Login() {
               name='email' 
               value={user.email} 
               onChange={(e) => handleChange(e)} 
-              id="standard-basic" 
               type="email" 
               label="Email" 
               autoComplete='off'
@@ -69,8 +81,8 @@ function Login() {
             />
           </div>
           <div className='login-buttons'>
-              <Button className='seller-button-user' onClick={() => handleSubmit() } variant='contained'>Sign In</Button>
-              <Button className='seller-button-seller' onClick={() => handleSeller() } variant='contained'>Sign In as Seller</Button>
+              <Button className='seller-button-user' onClick={(e) => handleSubmit(e) } variant='contained'>Sign In</Button>
+              <Button className='seller-button-seller' onClick={(e) => handleSeller(e) } variant='contained'>Sign In as Seller</Button>
           </div>
         </div>
         <div className='login-image-container'>

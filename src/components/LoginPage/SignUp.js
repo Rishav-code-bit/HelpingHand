@@ -39,10 +39,46 @@ function SignUp() {
             <h3>Welcome to our Page <Link className='login-link' to = "/login">SignIn</Link></h3>
           </div>
           <div className='signup-form'>
-            <input className='login-input' placeholder='Full Name' name='name' value={user.name} onChange={(e) => handleChange(e)} id="standard-basic" type="name" label="Full Name" variant="outlined" InputLabelProps={{style: {color: 'aliceblue'}}} />
-            <input className='login-input' placeholder='Phone Number' name='phone' value={user.phone} onChange={(e) => handleChange(e)} id="standard-basic" type="phonenumber" label="Phone Number" variant="outlined" InputLabelProps={{style: {color: 'aliceblue'}}} />
-            <input className='login-input' placeholder='Email Address' name='email' value={user.email} onChange={(e) => handleChange(e)} id="standard-basic" type="email" label="Email" variant="outlined" InputLabelProps={{style: {color: 'aliceblue'}}} />
-            <input className='login-input' placeholder='Password' name='password' value={user.password} onChange={(e) => handleChange(e)} id="standard-basic" type="password" label="Password" variant="outlined"  InputLabelProps={{style: {color: 'aliceblue'}}}/>
+            <input 
+              className='login-input' 
+              placeholder='Full Name' 
+              name='name' 
+              value={user.name} 
+              onChange={(e) => handleChange(e)} 
+              type="name" 
+              label="Full Name" 
+              autoComplete='off'
+            />
+            <input 
+              className='login-input' 
+              placeholder='Phone Number' 
+              name='phone' 
+              value={user.phone} 
+              onChange={(e) => handleChange(e)} 
+              type="phonenumber" 
+              label="Phone Number" 
+              autoComplete='off'
+            />
+            <input 
+              className='login-input' 
+              placeholder='Email Address' 
+              name='email' 
+              value={user.email} 
+              onChange={(e) => handleChange(e)} 
+              type="email" 
+              label="Email" 
+              autoComplete='off'
+            />
+            <input 
+              className='login-input' 
+              placeholder='Password' 
+              name='password' 
+              value={user.password} 
+              onChange={(e) => handleChange(e)} 
+              type="password" 
+              label="Password" 
+              autoComplete='off'
+            />
           </div>
           <div className='signup-buttons'>
               <Button className='seller-button-user' onClick={saveUser} variant='contained'>Sign Up</Button>
