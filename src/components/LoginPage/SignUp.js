@@ -38,7 +38,7 @@ function SignUp() {
             <h1>Signup to our app</h1>
             <h3>Welcome to our Page <Link className='login-link' to = "/login">SignIn</Link></h3>
           </div>
-          <div className='signup-form'>
+          <form onSubmit={saveUser} className='signup-form'>
             <input 
               className='login-input' 
               placeholder='Full Name' 
@@ -52,6 +52,7 @@ function SignUp() {
             <input 
               className='login-input' 
               placeholder='Phone Number' 
+              pattern="[6-9]{1}[0-9]{9}"
               name='phone' 
               value={user.phone} 
               onChange={(e) => handleChange(e)} 
@@ -72,6 +73,7 @@ function SignUp() {
             <input 
               className='login-input' 
               placeholder='Password' 
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               name='password' 
               value={user.password} 
               onChange={(e) => handleChange(e)} 
@@ -79,11 +81,8 @@ function SignUp() {
               label="Password" 
               autoComplete='off'
             />
-          </div>
-          <div className='signup-buttons'>
-              <Button className='seller-button-user' onClick={saveUser} variant='contained'>Sign Up</Button>
-              <Button className='seller-button-seller' variant='contained'>Sign Up as Seller</Button>
-          </div>
+            <Button className='seller-button-user' type='submit' variant='contained'>Sign Up</Button>
+          </form>
         </div>
         <div className='signup-image-container'>
         <img src={image} alt="SDP3"></img>
