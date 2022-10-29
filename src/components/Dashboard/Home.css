@@ -1,0 +1,122 @@
+.dash-home-container{
+    position: relative;
+    display: flex;
+    width: 98vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f8f7;
+    padding-left: 18vw;
+    z-index: -9;
+}
+
+.dash-home-navbar{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.SearchOutlinedIcon{
+    position: absolute;
+    margin-left: 5px;
+}
+
+.dash-home-searchbar{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+}
+
+.dash-home-title{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 230px;
+}
+
+.dash-product-section{
+    margin-left: 17vw;
+    width: 80vw;
+    padding: 40px;
+    background-color: #f6f5f3;
+    overflow-x: hidden;
+}
+
+.featured-product{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    color: aliceblue;
+    border-radius: 25px;
+    width: 70vw;
+    display: flex;
+    height: 200px;
+    cursor: pointer;
+}
+
+.fp-image{
+    height: max-content;
+    float: left;
+}
+
+.fp-image img{
+    object-fit: contain;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.fp-text{
+    padding: 20px;
+    color: black;
+    float: right;
+}
+
+.fp-text h4{
+    position: absolute;
+    bottom: 20px;
+}
+
+.fp-moreverticon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.products-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+}
+
+.product-card{
+    background-color: white;
+    height: 330px;
+    margin: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.product-card img{
+    width: 305px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.product-card h3 {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.product-footer{
+    padding: 20px;
+    width: 300px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}

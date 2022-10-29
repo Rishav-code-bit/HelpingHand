@@ -4,6 +4,7 @@
 
 .dashboard-navbar{
     float: left;
+    position: fixed;
 }
 
 .dashboard-body{

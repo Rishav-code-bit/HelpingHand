@@ -44,8 +44,9 @@
     width: 40%;
     min-width: 300px;
     padding: 40px;
+    align-items: center;
     justify-content: space-between;
-    height: 120px;
+    height: 200px;
 }
 
 .login-buttons {

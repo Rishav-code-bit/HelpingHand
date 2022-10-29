@@ -25,7 +25,7 @@ body
 .navbar-container .navbar-navigation
 {
     position: relative;
-    width: 250px;
+    width: 17vw;
     height: 100vh;
     background: #713882;
     overflow: hidden;
@@ -45,7 +45,7 @@ body
 
 .navbar-container .navbar-navigation.active
 {
-    width: 300px;
+    width: 17vw;
 }
 
 .navbar-container .navbar-navigation ul

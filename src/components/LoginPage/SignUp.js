@@ -48,6 +48,7 @@ function SignUp() {
               type="name" 
               label="Full Name" 
               autoComplete='off'
+              required
             />
             <input 
               className='login-input' 
@@ -59,6 +60,7 @@ function SignUp() {
               type="phonenumber" 
               label="Phone Number" 
               autoComplete='off'
+              required
             />
             <input 
               className='login-input' 
@@ -69,6 +71,7 @@ function SignUp() {
               type="email" 
               label="Email" 
               autoComplete='off'
+              required
             />
             <input 
               className='login-input' 
@@ -80,6 +83,7 @@ function SignUp() {
               type="password" 
               label="Password" 
               autoComplete='off'
+              required
             />
             <Button className='seller-button-user' type='submit' variant='contained'>Sign Up</Button>
           </form>
