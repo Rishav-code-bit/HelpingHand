@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Login.css'
 import image from '../../images/img2.png'
 import { Link, useHistory } from 'react-router-dom'
 import { Button } from '@mui/material';
 import { useState } from 'react';
 import LoginService from '../../services/LoginService';
+import authContext from '../../context/AuthContext';
 
 function Login() {
+
+  const a = useContext(authContext);
 
   const history = useHistory();
 
@@ -18,15 +21,18 @@ function Login() {
   const handleChange = (e) => {
     const value = e.target.value;
     setUser({...user,[e.target.name] : value});
-    console.log(user);
   }
 
   const handleSubmit = (e) => {
       e.preventDefault();
       LoginService.getUser(user.email)
       .then((response) => {
-        console.log(response.data);
         if(response.data.password === user.password){
+          a.setState({
+            name: user.name,
+            email: user.email,
+            isLogged: true,
+          });
           history.push("/dashboard");
         } else{
           alert("Username or password incorrect!");

@@ -8,5 +8,9 @@ body {
 
 .link-decoration{
   text-decoration: none;
+  color: aliceblue;
 }
 
+.link-decoration:hover{
+  color: rgb(117, 112, 112)
+}

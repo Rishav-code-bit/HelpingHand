@@ -15,8 +15,8 @@ function Home() {
             <div className='home-lists'>
                 <ul>
                     <li>Home</li>
-                    <li>About</li>
-                    <li>Github</li>
+                    <li><a className='link-decoration' href='https://www.linkedin.com/posts/srikoushik13_hey-connections-this-is-a-small-presentation-activity-6991980041685405696-HPYV' target='blank'>About</a></li>
+                    <li><a className='link-decoration' href='https://github.com/Rishav-code-bit/HelpingHand' target='blank'>Github</a></li>
                     <li>Contact</li>
                     <li><Link className='link-decoration' to="/login"><Button className='login-button' variant="contained">Login</Button></Link></li>
                     <li><Link className='link-decoration' to="/signup"><Button className='signup-button' variant="contained">Sign Up</Button></Link></li>
