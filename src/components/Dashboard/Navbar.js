@@ -1,7 +1,15 @@
 import React from 'react';
-import './Navbar.css'
+import './Navbar.css';
 
 function Navbar() {
+
+const handleLogout  = () => {
+    localStorage.setItem('name', "");
+    localStorage.setItem('email', "");
+    localStorage.setItem('isLogged', false);
+    window.location.reload(false);
+}
+
   return (
     <div class="navbar-container">
         <div class="navbar-navigation">
@@ -37,8 +45,8 @@ function Navbar() {
                         <span class="navbar-title">Settings</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li onClick={handleLogout}>
+                    <a>
                         <span class="navbar-icon"><i class="fa-solid fa-right-from-bracket"></i></span>
                         <span class="navbar-title">Sign Out</span>
                     </a>

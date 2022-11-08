@@ -54,6 +54,7 @@ body
     top: 0;
     left: 0;
     width: 100%;
+    cursor: pointer;
 }
 
 .navbar-container .navbar-navigation ul li

@@ -10,12 +10,12 @@ import authContext from '../../context/AuthContext';
 function Login() {
 
   const a = useContext(authContext);
-
   const history = useHistory();
 
   const [user, setUser] = useState({
+    name: "",
     email: "",
-    password: "",
+    isLogged: false,
   });
 
   const handleChange = (e) => {
@@ -27,12 +27,16 @@ function Login() {
       e.preventDefault();
       LoginService.getUser(user.email)
       .then((response) => {
+        user.name = response.data.name;
         if(response.data.password === user.password){
           a.setState({
             name: user.name,
             email: user.email,
             isLogged: true,
           });
+          localStorage.setItem('name', user.name);
+          localStorage.setItem('email', user.email);
+          localStorage.setItem('isLogged', true);
           history.push("/dashboard");
         } else{
           alert("Username or password incorrect!");
@@ -47,58 +51,49 @@ function Login() {
       })
   }
 
-  const handleSeller = (e) => {
-    e.preventDefault();
-    if(user.email==='admin' && user.password==='12345678'){
-      alert("Successfully logged in as Seller!");
-    }
-    else {
-      alert("Authentication unsuccessful!");
-    }
-    setUser({
-      email: "",
-      password: "",
-    })
-  }
+  const isLoggedIn = a.state.isLogged;
 
-  return (
-    <div className='login-body-container'>
-        <div className='login-form-container'>
-          <div>
-            <h1>Let's you sign in</h1>
-            <h3>Welcome to our Page <Link className='login-link' to = "/signup">SignUp</Link></h3>
+  if(isLoggedIn === "true"){
+    history.push("/dashboard");
+  } else{
+    return (
+      <div className='login-body-container'>
+          <div className='login-form-container'>
+            <div>
+              <h1>Let's you sign in</h1>
+              <h3>Welcome to our Page <Link className='login-link' to = "/signup">SignUp</Link></h3>
+            </div>
+            <div className='login-form'>
+              <input 
+                className='login-input' 
+                placeholder='Email Address' 
+                name='email' 
+                value={user.email} 
+                onChange={(e) => handleChange(e)} 
+                type="email" 
+                label="Email" 
+                autoComplete='off'
+              />
+              <input 
+                className='login-input' 
+                placeholder='Password' 
+                name='password' 
+                value={user.password} 
+                onChange={(e) => handleChange(e)} id="standard-basic" 
+                type="password" 
+                label="Password" 
+              />
+            </div>
+            <div className='login-buttons'>
+                <Button className='seller-button-user' onClick={(e) => handleSubmit(e) } variant='contained'>Sign In</Button>
+            </div>
           </div>
-          <div className='login-form'>
-            <input 
-              className='login-input' 
-              placeholder='Email Address' 
-              name='email' 
-              value={user.email} 
-              onChange={(e) => handleChange(e)} 
-              type="email" 
-              label="Email" 
-              autoComplete='off'
-            />
-            <input 
-              className='login-input' 
-              placeholder='Password' 
-              name='password' 
-              value={user.password} 
-              onChange={(e) => handleChange(e)} id="standard-basic" 
-              type="password" 
-              label="Password" 
-            />
+          <div className='login-image-container'>
+          <img src={image} alt="SDP3"></img>
           </div>
-          <div className='login-buttons'>
-              <Button className='seller-button-user' onClick={(e) => handleSubmit(e) } variant='contained'>Sign In</Button>
-              <Button className='seller-button-seller' onClick={(e) => handleSeller(e) } variant='contained'>Sign In as Seller</Button>
-          </div>
-        </div>
-        <div className='login-image-container'>
-        <img src={image} alt="SDP3"></img>
-        </div>
-    </div>
-  )
+      </div>
+    )
+  }
 }
 
 export default Login;

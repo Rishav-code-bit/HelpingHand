@@ -6,19 +6,11 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { products } from '../../constants/Products';
 import { featuredProducts } from '../../constants/Products';
 import authContext from '../../context/AuthContext';
-import {useHistory} from 'react-router-dom';
 
 function Home() {
 
   const a = useContext(authContext);
 
-  const isLoggedIn = a.state.isLogged;
-
-  const history = useHistory();
-
-  if(!isLoggedIn){
-    history.push("/login");
-  } else{
     return (
       <div>
         <div className='dash-home-container'>
@@ -28,7 +20,7 @@ function Home() {
           </div>
           <div className='dash-home-title'>
             <AccountCircleIcon />
-            <h3>{a.state.email}</h3>
+            <h3>{a.state.name}</h3>
           </div>
         </div>
         <div className='dash-product-section'>
@@ -68,7 +60,6 @@ function Home() {
         </div>
       </div>
     )
-  }
 }
 
 export default Home;

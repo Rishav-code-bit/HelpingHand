@@ -4,8 +4,9 @@ import AuthContext from './AuthContext';
 const AuthState = (props) => {
 
     const [state, setState] = useState({
-        email: "",
-        isLogged: false,
+        name: localStorage.getItem('name'),
+        email: localStorage.getItem('email'),
+        isLogged: localStorage.getItem('isLogged'),
     });
 
     return(
