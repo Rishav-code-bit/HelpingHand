@@ -1,0 +1,38 @@
+.pd-home-container{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f8f7;
+    padding-left: 18vw;
+    z-index: -9;
+}
+
+.pd-home-navbar{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.SearchOutlinedIcon{
+    position: absolute;
+    margin-left: 5px;
+}
+
+.pd-home-searchbar{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+}
+
+.pd-home-title{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

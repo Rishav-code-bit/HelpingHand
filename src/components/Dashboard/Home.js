@@ -1,15 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './Home.css';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { products } from '../../constants/Products';
 import { featuredProducts } from '../../constants/Products';
 import authContext from '../../context/AuthContext';
+import FetchProductService from '../../services/FetchProductService';
+import ProductCard from '../Cards/ProductCard';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
   const a = useContext(authContext);
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+      FetchProductService.getProduct()
+      .then(res => setProducts(res.data))
+      .catch(err => console.log(err));
+    }, []);
 
     return (
       <div>
@@ -46,14 +56,9 @@ function Home() {
           <div className='products-list'>
             {products.map((product) => {
               return (
-                <div className='product-card'>
-                  <img src={product.image} alt={product.id} />
-                  <h3>{product.title}</h3>
-                  <div className='product-footer'>
-                    <h5>By {product.seller}</h5>
-                    <h5>Rs. {product.price}</h5>
-                  </div>
-                </div>
+                <>
+                   <Link style={{ textDecoration: 'none', color: 'black' }} to={{ pathname: '/details/' + product.id }}><ProductCard {...product} /></Link>
+                </>
               );
             })}
           </div>
