@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar/Navbar";
 import WDisplay from "./WDisplay";
-import "./Dashboard.css";
-import authContext from "../../context/AuthContext";
+import "../styles/Dashboard.css";
+import authContext from "../../../context/AuthContext";
 import { useHistory } from "react-router-dom";
 
 function Dashboard() {

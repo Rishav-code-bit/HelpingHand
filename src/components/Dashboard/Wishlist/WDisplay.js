@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import "./Home.css";
+import "../styles/Home.css";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import authContext from "../../context/AuthContext";
-import WishlistCard from "../Cards/WishlistCard";
-import WishlistService from "../../services/WishlistService";
+import authContext from "../../../context/AuthContext";
+import WishlistCard from "../../Cards/WishlistCard";
+import WishlistService from "../../../services/WishlistService";
 import { Link } from "react-router-dom";
 
 function WDisplay() {

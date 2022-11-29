@@ -3,10 +3,10 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./components/Homepage/Home";
 import Login from "./components/LoginPage/Login";
 import SignUp from "./components/LoginPage/SignUp";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Home/Dashboard";
 import AuthState from "./context/AuthState";
 import ProductDetails from "./components/Details/ProductDetails";
-import WishList from "./components/Dashboard/Wishlist";
+import WishList from "./components/Dashboard/Wishlist/Wishlist";
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import { useParams, useHistory } from "react-router-dom";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import authContext from "../../context/AuthContext";
-import Navbar from "../Dashboard/Navbar";
+import Navbar from "../Dashboard/Navbar/Navbar";
 import "./ProductDetails.css";
 import FetchProductByID from "../../services/FetchProductByID";
 import { Button } from "@mui/material";

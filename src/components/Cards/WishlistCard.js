@@ -1,5 +1,5 @@
 import React from "react";
-import "../Dashboard/Home.css";
+import "../Dashboard/styles/Home.css";
 import ProductDetails from "../Details/ProductDetails";
 import ClearIcon from "@mui/icons-material/Clear";
 import WishlistService from "../../services/WishlistService";
