@@ -27,13 +27,21 @@ function Navbar() {
           <li>
             <a href="#">
               <span class="navbar-icon">
+                <i class="fa-solid fa-house-user"></i>
+              </span>
+              <span class="navbar-title">My Cart</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="navbar-icon">
                 <i class="fa-solid fa-user"></i>
               </span>
               <span class="navbar-title">My Orders</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/wishlist">
               <span class="navbar-icon">
                 <i class="fa-solid fa-message"></i>
               </span>

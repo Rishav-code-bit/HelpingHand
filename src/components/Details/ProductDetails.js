@@ -7,6 +7,7 @@ import Navbar from "../Dashboard/Navbar";
 import "./ProductDetails.css";
 import FetchProductByID from "../../services/FetchProductByID";
 import { Button } from "@mui/material";
+import WishlistService from "../../services/WishlistService";
 
 const ProductDetails = () => {
   const history = useHistory();
@@ -20,13 +21,41 @@ const ProductDetails = () => {
   const [products, setProducts] = useState([]);
 
   const [wishlist, setWishlist] = useState({
-    email: "",
+    id: 0,
+    email: a.state.email,
     title: "",
     price: "",
     image: "",
     seller: "",
     description: "",
   });
+
+  useEffect(() => {
+    setWishlist({
+      id: products.id,
+      email: a.state.email,
+      title: products.title,
+      price: products.price,
+      image: products.image,
+      seller: products.seller,
+      description: products.description,
+    });
+  }, [products, a]);
+
+  const handleWishlist = (e) => {
+    e.preventDefault();
+    WishlistService.saveProduct(wishlist)
+      .then((response) => {
+        if (response == null) {
+          alert("Product already in wishlist");
+        } else {
+          alert("Product Added to wishlist");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     FetchProductByID.getProduct(id)
@@ -72,6 +101,7 @@ const ProductDetails = () => {
                   width: "250px",
                 }}
                 variant="contained"
+                onClick={handleWishlist}
               >
                 Wishlist
               </Button>

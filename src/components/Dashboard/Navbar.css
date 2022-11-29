@@ -13,7 +13,6 @@ body
     display: flex;
     justify-content: left;
     align-items: center;
-    min-height: 100vh;
     background: #f6f5f3;
 }
 
