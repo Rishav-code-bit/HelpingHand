@@ -27,7 +27,7 @@ function Navbar() {
           <li>
             <a href="#">
               <span class="navbar-icon">
-                <i class="fa-solid fa-house-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
               </span>
               <span class="navbar-title">My Cart</span>
             </a>
@@ -35,7 +35,7 @@ function Navbar() {
           <li>
             <a href="#">
               <span class="navbar-icon">
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-list"></i>
               </span>
               <span class="navbar-title">My Orders</span>
             </a>
@@ -43,7 +43,7 @@ function Navbar() {
           <li>
             <a href="/wishlist">
               <span class="navbar-icon">
-                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-heart"></i>
               </span>
               <span class="navbar-title">Wishlist</span>
             </a>
