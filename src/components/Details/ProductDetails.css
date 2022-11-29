@@ -36,3 +36,67 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.details-container{
+    margin-top: 10vh;
+    padding: 40px;
+    height: 80vh;
+    width: 79vw;
+}
+
+.details-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #fff;
+    width: 60vw;
+    height: 30vw;
+    border-radius: 20px;
+}
+
+.details-card-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    border-radius: 20px;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.details-card-left img{
+    width: 100%;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.details-card-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px;
+    border-radius: 20px;
+    width: 60%;
+    height: 100%;
+    padding-bottom: 150px;
+}
+
+.details-card-title{
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.details-card-seller{
+    font-size: 20px;
+    color: gray;
+}
+
+.details-card-price{
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.details-card-description{
+    font-size: 24px;
+}
