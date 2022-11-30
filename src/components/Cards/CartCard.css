@@ -1,0 +1,32 @@
+.cart-card{
+    width: 50vw;
+    background-color: #f2e8de;
+    height: 20vh;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.cart-card-image img{
+    height: 20vh;
+    border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
+}
+
+.cart-card-details{
+    padding: 30px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+}
+
+.cart-card-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 20vh;
+}

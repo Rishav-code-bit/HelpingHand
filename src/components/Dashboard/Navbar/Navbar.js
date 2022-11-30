@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Navbar.css";
 
-
 function Navbar() {
   const handleLogout = () => {
     localStorage.setItem("name", "");
@@ -26,7 +25,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/cart">
               <span class="navbar-icon">
                 <i class="fa-solid fa-cart-shopping"></i>
               </span>

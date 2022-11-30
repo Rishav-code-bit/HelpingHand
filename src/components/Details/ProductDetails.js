@@ -8,6 +8,7 @@ import "./ProductDetails.css";
 import FetchProductByID from "../../services/FetchProductByID";
 import { Button } from "@mui/material";
 import WishlistService from "../../services/WishlistService";
+import CartService from "../../services/CartService";
 
 const ProductDetails = () => {
   const history = useHistory();
@@ -30,6 +31,14 @@ const ProductDetails = () => {
     description: "",
   });
 
+  const [cart, setCart] = useState({
+    email: a.state.email,
+    id: 0,
+    price: "",
+    title: "",
+    image: "",
+  });
+
   useEffect(() => {
     setWishlist({
       id: products.id,
@@ -42,6 +51,16 @@ const ProductDetails = () => {
     });
   }, [products, a]);
 
+  useEffect(() => {
+    setCart({
+      id: products.id,
+      email: a.state.email,
+      title: products.title,
+      price: products.price,
+      image: products.image,
+    });
+  }, [cart, a]);
+
   const handleWishlist = (e) => {
     e.preventDefault();
     WishlistService.saveProduct(wishlist)
@@ -50,6 +69,21 @@ const ProductDetails = () => {
           alert("Product already in wishlist");
         } else {
           alert("Product Added to wishlist");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const handleCart = (e) => {
+    e.preventDefault();
+    CartService.saveProduct(cart)
+      .then((response) => {
+        if (response == null) {
+          alert("Product already in Cart");
+        } else {
+          alert("Product Added to Cart");
         }
       })
       .catch((error) => {
@@ -92,6 +126,7 @@ const ProductDetails = () => {
               <Button
                 sx={{ backgroundColor: "#e969a1", width: "250px" }}
                 variant="contained"
+                onClick={handleCart}
               >
                 Add to Cart
               </Button>
