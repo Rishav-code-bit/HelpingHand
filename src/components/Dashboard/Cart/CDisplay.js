@@ -16,7 +16,12 @@ function CDisplay() {
 
   useEffect(() => {
     CartService.getProduct(a.state.email)
-      .then((res) => setProducts(res.data))
+      .then((res) => {
+        setProducts(res.data);
+        if (res.data.length === 0) {
+          setDiscount(0);
+        }
+      })
       .catch((err) => console.log(err));
   }, [a.state.email]);
 

@@ -1,8 +1,14 @@
 import React from "react";
 import "./CartCard.css";
 import DeleteIcon from "@mui/icons-material/Delete";
+import CartService from "../../services/CartService";
 
 const CartCard = (product) => {
+  const handleDelete = () => {
+    CartService.deleteProduct(product.cid).then((res) => {
+      window.location.reload();
+    });
+  };
   return (
     <div className="cart-card">
       <div className="cart-card-image">
@@ -19,6 +25,7 @@ const CartCard = (product) => {
             fontSize: "30px",
             cursor: "pointer",
           }}
+          onClick={handleDelete}
         />
       </div>
     </div>

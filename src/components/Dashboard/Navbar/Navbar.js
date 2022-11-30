@@ -6,7 +6,7 @@ function Navbar() {
     localStorage.setItem("name", "");
     localStorage.setItem("email", "");
     localStorage.setItem("isLogged", false);
-    window.location.reload(false);
+    window.location.reload();
   };
 
   return (

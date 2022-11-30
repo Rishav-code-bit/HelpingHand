@@ -14,6 +14,10 @@ class CartService {
   getSum(email) {
     return axios.get("http://localhost:8080/api/cartSum/" + email);
   }
+
+  deleteProduct(cid) {
+    return axios.delete(USER_API_BASE_URL + "/" + cid);
+  }
 }
 
 export default new CartService();
