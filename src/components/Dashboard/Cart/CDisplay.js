@@ -6,6 +6,7 @@ import authContext from "../../../context/AuthContext";
 import CartCard from "../../Cards/CartCard";
 import CartService from "../../../services/CartService";
 import { Button } from "@mui/material";
+import OrderService from "../../../services/OrderService";
 
 function CDisplay() {
   const a = useContext(authContext);
@@ -13,6 +14,16 @@ function CDisplay() {
   const [products, setProducts] = useState([]);
   const [sum, setSum] = useState(0);
   const [discount, setDiscount] = useState(199);
+
+  const handleCheckout = () => {
+    OrderService.saveOrder(a.state.email)
+      .then((res) => {
+        alert("Order Placed Successfully");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     CartService.getProduct(a.state.email)
@@ -83,6 +94,7 @@ function CDisplay() {
               <Button
                 variant="contained"
                 sx={{ width: "150px", backgroundColor: "rgb(56, 164, 56)" }}
+                onClick={handleCheckout}
               >
                 PLACE ORDER
               </Button>

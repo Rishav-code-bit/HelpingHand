@@ -33,7 +33,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/order">
               <span class="navbar-icon">
                 <i class="fa-solid fa-list"></i>
               </span>

@@ -8,6 +8,7 @@ import AuthState from "./context/AuthState";
 import ProductDetails from "./components/Details/ProductDetails";
 import WishList from "./components/Dashboard/Wishlist/Wishlist";
 import Cart from "./components/Dashboard/Cart/Cart";
+import Order from "./components/Dashboard/Orders/Order";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/details/:id" exact component={ProductDetails} />
             <Route path="/wishlist" exact component={WishList} />
             <Route path="/cart" exact component={Cart} />
+            <Route path="/order" exact component={Order} />
           </Switch>
         </BrowserRouter>
       </AuthState>

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import Navbar from "../Navbar/Navbar";
-import CDisplay from "./CDisplay";
+import CDisplay from "./ODisplay";
 import "../styles/Dashboard.css";
 import authContext from "../../../context/AuthContext";
 import { useHistory } from "react-router-dom";
 
-function Cart() {
+function Order() {
   const a = useContext(authContext);
 
   const history = useHistory();
@@ -28,4 +28,4 @@ function Cart() {
   }
 }
 
-export default Cart;
+export default Order;
