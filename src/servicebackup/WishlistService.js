@@ -1,7 +1,6 @@
 import axios from "axios";
-import uri from "./urls";
 
-const USER_API_BASE_URL = uri + "/api/wishlist";
+const USER_API_BASE_URL = "http://localhost:8080/api/wishlist";
 
 class AddWishlistService {
   saveProduct(product) {
@@ -9,11 +8,11 @@ class AddWishlistService {
   }
 
   getProduct(email) {
-    return axios.get(uri + `/api/wishlist/${email}`);
+    return axios.get(`http://localhost:8080/api/wishlist/${email}`);
   }
 
   deleteProduct(wid) {
-    return axios.delete(uri + `/api/wishlist/${wid}`);
+    return axios.delete(`http://localhost:8080/api/wishlist/${wid}`);
   }
 }
 

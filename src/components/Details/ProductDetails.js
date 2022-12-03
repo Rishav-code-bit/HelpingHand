@@ -5,7 +5,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import authContext from "../../context/AuthContext";
 import Navbar from "../Dashboard/Navbar/Navbar";
 import "./ProductDetails.css";
-import FetchProductByID from "../../services/FetchProductByID";
+import ProductService from "../../services/ProductService";
 import { Button } from "@mui/material";
 import WishlistService from "../../services/WishlistService";
 import CartService from "../../services/CartService";
@@ -92,7 +92,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    FetchProductByID.getProduct(id)
+    ProductService.getProduct(id)
       .then((res) => {
         setProducts(res.data);
       })

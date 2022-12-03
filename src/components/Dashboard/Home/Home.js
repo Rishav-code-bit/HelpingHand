@@ -5,7 +5,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { featuredProducts } from "../../../constants/Products";
 import authContext from "../../../context/AuthContext";
-import FetchProductService from "../../../services/FetchProductService";
+import ProductService from "../../../services/ProductService";
 import ProductCard from "../../Cards/ProductCard";
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ function Home() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    FetchProductService.getProduct()
+    ProductService.getProducts()
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   }, []);

@@ -4,7 +4,7 @@ import image from "../../images/img2.png";
 import { Link, useHistory } from "react-router-dom";
 import { Button } from "@mui/material";
 import { useState } from "react";
-import LoginService from "../../services/LoginService";
+import UserService from "../../services/UserService";
 import authContext from "../../context/AuthContext";
 
 function Login() {
@@ -24,7 +24,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    LoginService.getUser(user.email)
+    UserService.getUser(user.email)
       .then((response) => {
         user.name = response.data.name;
         if (response.data.password === user.password) {
@@ -98,6 +98,21 @@ function Login() {
               Sign In
             </Button>
           </div>
+          <Link
+            style={{ textDecoration: "none", color: "aliceblue" }}
+            to="/verify"
+            className="login-link"
+          >
+            <h4
+              style={{
+                marginTop: "-60px",
+                padding: "20px",
+                cursor: "pointer",
+              }}
+            >
+              Forgot Password?
+            </h4>
+          </Link>
         </div>
         <div className="login-image-container">
           <img src={image} alt="SDP3"></img>

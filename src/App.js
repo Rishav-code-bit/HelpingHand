@@ -9,6 +9,8 @@ import ProductDetails from "./components/Details/ProductDetails";
 import WishList from "./components/Dashboard/Wishlist/Wishlist";
 import Cart from "./components/Dashboard/Cart/Cart";
 import Order from "./components/Dashboard/Orders/Order";
+import ForgotPassword from "./components/LoginPage/ForgotPassword";
+import Otp from "./components/OTP/Otp";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
             <Route path="/wishlist" exact component={WishList} />
             <Route path="/cart" exact component={Cart} />
             <Route path="/order" exact component={Order} />
+            <Route path="/verify" exact component={Otp} />
+            <Route path="/forgotpassword" exact component={ForgotPassword} />
+            <Route path="*" component={() => "404 NOT FOUND"} />
           </Switch>
         </BrowserRouter>
       </AuthState>

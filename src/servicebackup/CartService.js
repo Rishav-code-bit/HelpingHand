@@ -1,7 +1,6 @@
 import axios from "axios";
-import uri from "./urls";
 
-const USER_API_BASE_URL = uri + "/api/cart";
+const USER_API_BASE_URL = "http://localhost:8080/api/cart";
 
 class CartService {
   saveProduct(product) {
@@ -13,7 +12,7 @@ class CartService {
   }
 
   getSum(email) {
-    return axios.get(uri + "/api/cartSum/" + email);
+    return axios.get("http://localhost:8080/api/cartSum/" + email);
   }
 
   deleteProduct(cid) {
