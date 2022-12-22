@@ -5,11 +5,7 @@ This is our Skill Development project - 3. This was created in the 5th semester 
 ## Modules
 
 There are two modules in this project, the first one is user module and the other is admin module. <br />
-The project is divided into three branches: 
-
-- Client Side (React) - https://github.com/Audacity21/Helping-Hand/tree/client
-- Admin Side (React) - https://github.com/Audacity21/Helping-Hand/tree/admin-app
-- Server (Spring boot) - https://github.com/Audacity21/Helping-Hand/tree/server
+The project is divided into three parts: Client side, Server side, Admin side
 
 ## Screenshots: 
 ## User App
