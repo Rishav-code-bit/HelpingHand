@@ -1,73 +1,33 @@
-# Getting Started with Create React App
+# Helping-Hand
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is our Skill Development project - 3. This was created in the 5th semester of our college. This is a web application which intends to give a platform to the tribal artisans to sell their products directly to the customers without having to deal with any third party vendors. We have two apps, one for the admin and one for the customers. More detailed description are given below.
 
-## Available Scripts
+## Modules
 
-In the project directory, you can run:
+There are two modules in this project, the first one is user module and the other is admin module. <br />
+The project is divided into three branches: 
 
-### `npm start`
+- Client Side (React) - https://github.com/Audacity21/Helping-Hand/tree/client
+- Admin Side (React) - https://github.com/Audacity21/Helping-Hand/tree/admin-app
+- Server (Spring boot) - https://github.com/Audacity21/Helping-Hand/tree/server
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshots: 
+## User App
+Homepage: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830421-506403c3-394e-49be-96f9-8713a80d1ad6.png)
+Dashboard: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830457-68636440-142b-4700-92f6-263e19d6ab4b.png)
+Cart: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830473-829ed1f4-2497-49e4-8169-2abc316d47ba.png)
+Orders: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830486-a0a6650e-0efa-4ef5-acc3-cdb511fe418d.png)
+Wishlist: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830500-395ff54b-6b2b-49bb-bdfb-ede36caf30a1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-- Rishav Kumar 
--Ankit seth
-- M S Koushik
+##Admin App
+Add Product: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830603-088572d5-877a-41fe-ac48-5065dd55c8c1.png)
+View Products: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830608-c8ed6f42-e6c5-4d9f-bb4c-94a57695d3e4.png)
+View Orders: <br />
+![image](https://user-images.githubusercontent.com/74983916/206830655-51febcf4-0450-463a-b3ec-1a7bc64c2c68.png)
